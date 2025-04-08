@@ -15,7 +15,7 @@ We apply different supervised machine learning techinques to solve the physics p
 
 ## 🚀 Assignment description 
 
-Assignment 1 
+## Assignment 1 
 - Basic series calculation (fibonacci sequence)
 - Basic Matrix mutiplication through numpy
 - Gradient descent to solve the A quadratic polynomial, here is the sample Pseudocode:
@@ -46,7 +46,7 @@ Assignment 1
     Return x, steps, i, residuals
 
 
-Assignement 2 
+## Assignement 2 
 - Sigmoid function application
 - Iris dataset training 
     - load the data
@@ -119,7 +119,7 @@ Assignement 2
 - Comparsion between two training method with system size (N = 30 and N =200)
 
 
-Assignment 3
+## Assignment 3
 - Test 3 system size 2_D Ising model and plot the magnetization
 - principal component analysis
   - creation of covarance matrix
@@ -128,7 +128,7 @@ Assignment 3
   - Do the K-mean classification on the graph of pca, there should be 3 centroid of 3 pca
   - Analysis on the feature of eigenvector
 
-Assignment 4
+## Assignment 4
 - Parpare X and Y, define the signmoid function as the activation function
 - Do the class of Neural network to to train the model, the network's structure is shown as follow:
   
