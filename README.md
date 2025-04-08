@@ -45,6 +45,73 @@ Assignment 1
 
     Return x, steps, i, residuals
 
+
+Assignement 2 
+- Sigmoid function application
+- Iris dataset training 
+    - load the data
+    - split the data to training and testing dataset
+    - Train the model (cost: Corss entropy; activation: hyperpolitic tangent)
+    - model Prediction
+
+- Logestic Regression (example with Fermi Surface)
+    Function logistic_regression_model(N, mu, n_itr = 50000):
+
+    # Step 1: Generate random values for kx and ky
+    For i from 1 to N:
+        kx[i] ← random number in range [0, π)
+        ky[i] ← random number in range [0, π)
+
+    # Step 2: Calculate energy E for each (kx, ky)
+    For i from 1 to N:
+        E[i] ← -2 × (cos(kx[i]) + cos(ky[i]))
+
+    # Step 3: Determine occupancy based on chemical potential mu
+    For i from 1 to N:
+        If E[i] ≤ mu:
+            occupancy[i] ← 1
+        Else:
+            occupancy[i] ← 0
+
+    # Step 4: Construct feature matrix X
+    For i from 1 to N:
+        X[i] ← [
+            kx[i],
+            ky[i],
+            kx[i]^2,
+            ky[i]^2,
+            kx[i] × ky[i]
+        ]
+
+    # Step 5: Construct label vector y
+    y ← occupancy as a column vector of shape (N, 1)
+
+    # Step 6: Add bias term to X
+    For i from 1 to N:
+        X_b[i] ← [1, X[i][0], X[i][1], X[i][2], X[i][3], X[i][4]]
+
+    # Step 7: Initialize parameter vector theta
+    theta ← zero vector of shape (number of features + 1, 1)
+
+    # Step 8: Train logistic regression model using gradient descent
+    Create model instance: model1 ← LogisticRegressionUsingGD()
+    model1.fit(X_b, y, theta, n_itr)
+
+    # Step 9: Evaluate model accuracy
+    accuracy ← model1.accuracy(X_b, y)
+
+    # Step 10: Get trained parameters
+    parameters ← model1.w_
+
+    Return (accuracy, parameters)
+- Support Vector Machine
+- Comparsion between two training method with system size (N = 30 and N =200)
+
+Assignment 3
+- Test 3 system size 2_D Ising model and plot the magnetization
+- principal component analysis
+
+
   
 
 
